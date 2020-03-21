@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+  <div class="root">
+
+
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="button user-info__edit-button">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+
+
+    <div class="places-list root__section">
+
+    </div>
+
+    
+    <div class="popup popup_add-card">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new" novalidate>
+          <div class="popup__input-field popup__input-field_name">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" minlength="2" maxlength="30" required>
+            <p class="popup__error-message"></p>
+          </div>
+          <div class="popup__input-field popup__input-field_link">
+            <input type="text" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" pattern=((^http://)|(^https://)|(^file://)|(^ftp://)).+ required>
+            <p class="popup__error-message"></p>
+          </div>
+            <button type class="button popup__button" disabled>+</button>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="popup popup_edit-user-info">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit" novalidate>
+          <div class="popup__input-field popup__input-field_name">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" minlength="2" maxlength="30" required>
+            <p class="popup__error-message"></p>
+          </div>
+          <div class="popup__input-field popup__input-field_job">
+            <input type="text" name="job" class="popup__input popup__input_type_link-url" placeholder="О себе" minlength="2" maxlength="30" required>
+            <p class="popup__error-message"></p>
+          </div>
+            <button type class="button popup__button popup__edit-button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="popup popup_popup-image">
+      <div class="popup__container">
+        <img alt='' class="popup__image">
+        <img src="./images/close.svg" alt="" class="popup__close">
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+  <script src='./js/Card.js' type="text/javascript"></script>
+  <script src='./js/CardList.js' type="text/javascript"></script>
+  <script src='./js/Popup.js' type="text/javascript"></script>
+  <script src='./js/UserInfo.js' type="text/javascript"></script>
+  <script src='./js/FormValidator.js' type="text/javascript"></script>
+  <script src='./js/Api.js' type="text/javascript"></script>
+  <script src="./js/script.js" type="text/javascript"></script>
+</body>
+</html>
