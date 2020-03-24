@@ -1,4 +1,4 @@
-class FormValidator {
+export class FormValidator {
 
     constructor(form, func) {
       this.form = form;
@@ -23,7 +23,7 @@ class FormValidator {
     }
   
     // Валидационные методы
-    checkEmptyness = (input, field) => {
+    checkEmptyness(input, field) {
       if (input.validity.valueMissing) {
         this.checkInputValidity(field, this.errorMessages.empty);
         return 1;
@@ -32,7 +32,7 @@ class FormValidator {
       }
     }
   
-    checkQuanity = (input, field) => {
+    checkQuanity(input, field) {
       if (input.validity.tooShort) {
         this.checkInputValidity(field, this.errorMessages.twothirty);
         return 1;
@@ -41,7 +41,7 @@ class FormValidator {
       }
     }
   
-    checkLink = (input, field) => {
+    checkLink(input, field) {
       if (input.validity.patternMismatch) {
         this.checkInputValidity(field, this.errorMessages.isntLink);
         return 1;

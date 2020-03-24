@@ -1,4 +1,4 @@
-class Api {
+export class Api {
   constructor(ip, authorization, contentType) {
     this.link = ip;
     this.authorization = authorization;
@@ -39,7 +39,7 @@ class Api {
         return Promise.reject(res.status);
       })
       .catch(err => {console.log(`Ошибка ${err}`)});
-}   
+  }   
 
   getInitialCards() {
     return fetch(this.link + '/cards', {

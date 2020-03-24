@@ -1,4 +1,4 @@
-class Popup {  
+export class Popup {  
   
     // Закрываю формы
     close(event) {

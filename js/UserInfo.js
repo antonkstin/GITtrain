@@ -1,4 +1,4 @@
-class UserInfo {
+export class UserInfo {
     constructor() {
       this.pageName = document.querySelector('.user-info__name');;
       this.pageJob = document.querySelector('.user-info__job');
