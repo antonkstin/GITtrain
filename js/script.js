@@ -13,8 +13,8 @@
 
 
   // -----------------------------------------------------------------------------------------------------------------------------   Создание объектов конструкторами
-
-  const api = new Api('https://praktikum.tk/cohort8', 'bce9db7e-7c88-48b0-8a1e-72b56b71578e', 'application/json');
+  const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort8' : 'https://praktikum.tk/cohort8';
+  const api = new Api(serverUrl, 'bce9db7e-7c88-48b0-8a1e-72b56b71578e', 'application/json');
 
   const card = new Card();
 
