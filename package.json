@@ -1,11 +1,13 @@
 {
   "name": "gittrain",
   "version": "0.0.2",
+  "homepage": "https://antonkstin.github.io/GITtrain/",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,7 @@
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "~2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
