@@ -1,7 +1,7 @@
 {
   "name": "gittrain",
+  "version": "0.0.2",
   "homepage": "https://antonkstin.github.io/GITtrain/",
-  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
